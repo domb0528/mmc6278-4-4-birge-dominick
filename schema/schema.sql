@@ -5,21 +5,20 @@ USE music_db;
 CREATE TABLE artists (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 -- create a "name" column that's a varchar of max 100 characters
-ALTER TABLE artists
-add name VARCHAR(100) NULL, name INT NULL ;
+
+ name VARCHAR(100)
 );
 
 CREATE TABLE albums (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   
-  ALTER TABLE albums
-  add name VARCHAR(100) NULL, name INT NULL ;
+ name VARCHAR(100),
 
-  ALTER TABLE albums
-  add artist_id INT
+  
+  artist_id INT,
 
-  ALTER TABLE
-  add release_year INT
+  
+ release_year INT,
   
   
 -- create a "name" column that's a varchar of max 100 characters
@@ -33,17 +32,16 @@ CREATE TABLE albums (
 CREATE TABLE songs (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
-  ALTER TABLE songs
- add name VARCHAR(100) NULL, name INT NULL ;
+name VARCHAR(100),
 
-ALTER TABLE songs
-add track_number INT
 
-ALTER TABLE songs
-add artist_id INT
+ track_number INT,
 
-ALTER TABLE songs
-add album_id INT
+
+ artist_id INT,
+
+ album_id INT,
+
 -- create a "name" column that's a varchar of max 100 characters
 -- create a "track_number" column that's an integer
 -- create an "artist_id" column that's an integer
